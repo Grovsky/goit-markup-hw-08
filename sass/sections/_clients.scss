@@ -1,0 +1,36 @@
+.clients__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16em;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+.clients__company {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.company__link {
+  width: 170px;
+  height: 92px;
+  display: flex;
+  align-items: center;
+  background-color: var(--special-text-color);
+  justify-content: center;
+  color: var(--icon-color);
+  /* fill: var(--icon-color); */
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+
+  transition: color var(--timing-function), border-color var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+  }
+}
+.company__icon {
+  fill: currentColor;
+}

@@ -1,0 +1,35 @@
+.process {
+  padding-top: 0;
+}
+.process__picture {
+  display: flex;
+}
+.process__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.picture__item {
+  position: relative;
+  z-index: -1;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.picture__text-img {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  min-width: 370px;
+  min-height: 70px;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+  background-color: var(--img-text-background);
+  color: var(--special-text-color);
+}
