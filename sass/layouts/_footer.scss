@@ -2,13 +2,19 @@
   background: var(--footer-background);
   padding-bottom: 60px;
   padding-top: 60px;
+  justify-content: center;
 }
 .basement__logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.2;
+  font-size: 24px;
+  line-height: 1.16;
+
   color: var(--special-text-color);
+  @include desktop {
+    font-size: 26px;
+    line-height: 1.2;
+  }
 }
 .logo__part--light {
   color: var(--accent-color);
@@ -17,9 +23,19 @@
   font-style: normal;
   margin-top: 20px;
 }
-.connection__item:not(:last-child) {
-  margin-bottom: 9px;
+.adress__connection {
+  display: flex;
+  gap: 8px;
+  flex-direction: column;
+  align-items: center;
+  @include desktop {
+    align-items: flex-start;
+  }
 }
+// .connection__item:not(:last-child) {
+//   margin-bottom: 8px;
+//   // margin-bottom: 9px;
+// }
 .connection__map {
   color: var(--special-text-color);
   line-height: 1.71;
@@ -45,22 +61,49 @@
 
 .footer__container {
   display: flex;
-  align-items: baseline;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+  @include tablet {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+  }
+  @include desktop {
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    gap: 70px;
+  }
 }
 .footer__basement {
-  margin-right: 70px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  @include desktop {
+    align-items: flex-start;
+  }
+  // margin-right: 70px;
 }
 .soc__title {
-  margin-bottom: 20px;
   font-weight: 700;
   line-height: 1.14em;
+  text-align: center;
   text-transform: uppercase;
   color: var(--special-text-color);
+  @include desktop {
+    text-align: left;
+  }
 }
 .soc-list__list {
   display: flex;
-  justify-content: center;
   gap: 10px;
+  margin-top: 20px;
+  // display: flex;
+  // justify-content: center;
+  // gap: 10px;
 }
 .soc-list__link {
   width: 44px;
@@ -81,9 +124,18 @@
 }
 
 .basement__subscribe {
-  margin-left: 93px;
-  display: flex;
-  flex-wrap: wrap;
+  width: 100%;
+  text-align: center;
+  @include tablet {
+    width: 450px;
+  }
+  @include desktop {
+    width: 570px;
+    text-align: left;
+  }
+  // margin-left: 93px;
+  // display: flex;
+  // flex-wrap: wrap;
 }
 .subscribe__label {
   display: inline-block;
@@ -95,9 +147,19 @@
 }
 .subscribe__wrap {
   display: flex;
-  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  @include desktop {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    gap: 12px;
+  }
 }
 .subscribe__input {
+  width: 100%;
   min-width: 358px;
   min-height: 50px;
   font-weight: 400;
@@ -111,6 +173,12 @@
   border-radius: 4px;
   padding-left: 16px;
   background-color: inherit;
+  @include tablet {
+    width: 450px;
+  }
+  @include desktop {
+    width: 570px;
+  }
 }
 .subscribe__btn {
   display: flex;

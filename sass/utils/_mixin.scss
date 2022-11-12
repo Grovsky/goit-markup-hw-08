@@ -25,6 +25,11 @@
     @content;
   }
 }
+@mixin max-767 {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
 @mixin retina {
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),

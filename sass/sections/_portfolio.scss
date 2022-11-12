@@ -1,15 +1,27 @@
 .portfolio__filter {
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: left;
-  margin-bottom: 50px;
-  column-gap: 8px;
+  margin-bottom: 40px;
+  gap: 8px;
+
+  @include max-767 {
+    gap: 15px;
+    column-gap: 8px;
+    max-width: 326px;
+  }
+  @include tablet {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+  @include desktop {
+    margin-bottom: 50px;
+    justify-content: center;
+  }
 }
 .portfolio__cards-list {
   display: flex;
-  gap: 30px;
   flex-wrap: wrap;
+  gap: 30px;
 }
 .filter__btn {
   font-weight: 500;
@@ -38,7 +50,15 @@
   border-top: none;
 }
 .cards-list__item {
-  flex-basis: calc((100% - 2 * 30px) / 3);
+  width: 100%;
+
+  @include tablet {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+
+  @include desktop {
+    flex-basis: calc((100% - 60px) / 3);
+  }
 }
 .cards-list__link {
   width: 370px;
@@ -65,8 +85,11 @@
   margin: 0;
 
   padding: 63px 24px;
+  font-weight: 400;
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1.55;
+  // font-size: 18px;
+  // line-height: 1.6;
 
   color: var(--special-text-color);
   background-color: var(--overlay-background);

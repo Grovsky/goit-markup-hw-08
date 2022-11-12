@@ -196,15 +196,30 @@
           <h2 class="process__title">Чим ми займаємося</h2>
           <ul class="process__picture">
             <li class="picture__item">
-              <img src="./images/process1.jpg" alt="process1" width="370" />
+              <img
+                srcset="./images/process1.jpg 1x, ./images/process1-2x.jpg 2x"
+                src="./images/process1.jpg"
+                alt="process1"
+                width="370"
+              />
               <p class="picture__text-img">Десктопні додатки</p>
             </li>
             <li class="picture__item">
-              <img src="./images/process2.jpg" alt="process2" width="370" />
+              <img
+                srcset="./images/process2.jpg 1x, ./images/process2-2x.jpg 2x"
+                src="./images/process2.jpg"
+                alt="process2"
+                width="370"
+              />
               <p class="picture__text-img">Мобільні додатки</p>
             </li>
             <li class="picture__item">
-              <img src="./images/process3.jpg" alt="process3" width="370" />
+              <img
+                srcset="./images/process3.jpg 1x, ./images/process3-2x.jpg 2x"
+                src="./images/process3.jpg"
+                alt="process3"
+                width="370"
+              />
               <p class="picture__text-img">Дизайнерські рішення</p>
             </li>
           </ul>
@@ -215,7 +230,31 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__specialists">
             <li class="specialists__item">
-              <img src="./images/member1.jpg" alt="Product Designer" />
+              <picture>
+                <source
+                  srcset="./images/member1.jpg 1x, ./images/member1-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/member1-tab.jpg    1x,
+                    ./images/member1-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/member1-mob.jpg    1x,
+                    ./images/member1-mob-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/member1.jpg"
+                  alt="Product Designer"
+                  width="450"
+                />
+              </picture>
               <div class="cards__wrap">
                 <h3 class="cards__name">Ігор Дем'яненко</h3>
                 <p class="cards__post">Product Designer</p>
@@ -252,7 +291,31 @@
               </div>
             </li>
             <li class="specialists__item">
-              <img src="./images/member2.jpg" alt="Frontend Developer" />
+              <picture>
+                <source
+                  srcset="./images/member2.jpg 1x, ./images/member2-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/member2-tab.jpg    1x,
+                    ./images/member2-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/member2-mob.jpg    1x,
+                    ./images/member2-mob-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img
+                  src="./images/member2.jpg"
+                  alt="Frontend Developer"
+                  width="450"
+                />
+              </picture>
               <div class="cards__wrap">
                 <h3 class="cards__name">Ольга Рєпіна</h3>
                 <p class="cards__post">Frontend Developer</p>
@@ -289,7 +352,27 @@
               </div>
             </li>
             <li class="specialists__item">
-              <img src="./images/member3.jpg" alt="Marketing" />
+              <picture>
+                <source
+                  srcset="./images/member3.jpg 1x, ./images/member3-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/member3-tab.jpg    1x,
+                    ./images/member3-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/member3-mob.jpg    1x,
+                    ./images/member3-mob-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img src="./images/member3.jpg" alt="Marketing" width="450" />
+              </picture>
               <div class="cards__wrap">
                 <h3 class="cards__name">Микола Тарасов</h3>
                 <p class="cards__post">Marketing</p>
@@ -326,7 +409,27 @@
               </div>
             </li>
             <li class="specialists__item">
-              <img src="./images/member4.jpg" alt="UI Designer" />
+              <picture>
+                <source
+                  srcset="./images/member4.jpg 1x, ./images/member4-2x.jpg 2x"
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/member4-tab.jpg    1x,
+                    ./images/member4-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/member4-mob.jpg    1x,
+                    ./images/member4-mob-2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                />
+                <img src="./images/member4.jpg" alt="UI Designer" width="450" />
+              </picture>
               <div class="cards__wrap">
                 <h3 class="cards__name">Михайло Єрмаков</h3>
                 <p class="cards__post">UI Designer</p>
@@ -415,7 +518,7 @@
         </div>
       </section>
     </main>
-    <!-- <footer class="footer">
+    <footer class="footer">
       <div class="container footer__container">
         <div class="footer__basement">
           <a href="./index.html" class="basement__logo link"
@@ -504,7 +607,7 @@
           </form>
         </div>
       </div>
-    </footer> -->
+    </footer>
     <script src="./js/modal.js"></script>
   </body>
 </html>
