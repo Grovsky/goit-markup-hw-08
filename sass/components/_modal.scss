@@ -23,14 +23,29 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 530px;
-  min-height: 580px;
+  min-width: 450px;
+  min-height: 609px;
   padding: 15px;
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--timing-function);
   background-color: var(--special-text-color);
   border-radius: 4px;
   padding: 40px;
+  @include desktop {
+    min-width: 530px;
+    min-height: 580px;
+  }
+  // position: absolute;
+  // top: 50%;
+  // left: 50%;
+  // min-width: 530px;
+  // min-height: 580px;
+  // padding: 15px;
+  // transform: translate(-50%, -50%) scale(1);
+  // transition: transform var(--timing-function);
+  // background-color: var(--special-text-color);
+  // border-radius: 4px;
+  // padding: 40px;
 }
 .modal-btn {
   position: absolute;
@@ -53,9 +68,20 @@
 .modal-title {
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   margin-bottom: 10px;
+  @media screen and (max-width: 1199px) {
+    max-width: 370px;
+  }
+  @include desktop {
+    line-height: 1.15;
+  }
+  // font-weight: 700;
+  // font-size: 20px;
+  // line-height: 1.15;
+  // text-align: center;
+  // margin-bottom: 10px;
 }
 .modal-field:not(:last-child) {
   margin-bottom: 10px;
@@ -72,7 +98,6 @@
   height: 40px;
   border: 1px solid var(--modal-border);
   border-radius: 4px;
-  font-size: 14px;
   color: var(--title-color);
   padding-left: 42px;
   outline: transparent;
@@ -135,13 +160,24 @@
 }
 
 .check-text {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
-  color: var(--text-color);
   display: flex;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16px;
   align-items: center;
   justify-content: center;
+  color: var(--text-color);
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  // font-weight: 400;
+  // font-size: 14px;
+  // line-height: 1.7;
+  // color: var(--text-color);
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
 
   span {
     width: 16px;
@@ -172,12 +208,23 @@
 
 .check-link {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.7;
+  font-size: 12px;
+  line-height: 1.16;
   text-underline-offset: 3px;
   text-decoration-line: underline;
   margin-left: 5px;
   color: var(--accent-color);
+  @include desktop {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  // font-weight: 400;
+  // font-size: 14px;
+  // line-height: 1.7;
+  // text-underline-offset: 3px;
+  // text-decoration-line: underline;
+  // margin-left: 5px;
+  // color: var(--accent-color);
 }
 /* Вариант без спрайта
 .check-text::before {              

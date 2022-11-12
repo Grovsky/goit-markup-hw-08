@@ -1,8 +1,14 @@
 .process {
   padding-top: 0;
+  @include max-1199 {
+    display: none;
+  }
 }
 .process__picture {
   display: flex;
+  @include max-1199 {
+    display: none;
+  }
 }
 .process__title {
   font-weight: 700;
@@ -10,12 +16,18 @@
   line-height: 1.16;
   text-align: center;
   margin-bottom: 50px;
+  @include max-1199 {
+  }
+  display: none;
 }
 .picture__item {
   position: relative;
   z-index: -1;
   &:not(:last-child) {
     margin-right: 30px;
+  }
+  @include max-1199 {
+    display: none;
   }
 }
 
@@ -32,4 +44,7 @@
   text-transform: uppercase;
   background-color: var(--img-text-background);
   color: var(--special-text-color);
+  @include max-1199 {
+    display: none;
+  }
 }
