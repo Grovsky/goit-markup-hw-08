@@ -12,9 +12,9 @@
   font-size: 28px;
   line-height: 1.17;
   text-align: center;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
   @include desktop {
-    font-style: 36px;
+    font-size: 36px;
     line-height: 1.16;
     margin-bottom: 50px;
   }

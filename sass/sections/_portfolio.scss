@@ -22,6 +22,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  align-items: center;
 }
 .filter__btn {
   font-weight: 500;
@@ -48,7 +49,14 @@
   padding: 20px 24px;
   border: 1px solid var(--border-color);
   border-top: none;
+  
 }
+.cards-list__wrap-tab{
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding: 20px 24px 56px 24px;
+  }
+}
+
 .cards-list__item {
   width: 100%;
 
@@ -61,7 +69,7 @@
   }
 }
 .cards-list__link {
-  width: 370px;
+  width: 100%;
   display: block;
 
   transition: box-shadow var(--timing-function);
