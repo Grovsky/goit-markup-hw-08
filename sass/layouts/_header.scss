@@ -245,7 +245,7 @@
 
 .current {
   color: var(--accent-color);
-  @include mobile {
+  @include tablet {
     &::after {
       content: "";
       display: block;
